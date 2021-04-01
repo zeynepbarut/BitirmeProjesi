@@ -1,0 +1,36 @@
+/* eslint-disable prettier/prettier */
+/* eslint-disable eol-last */
+/* eslint-disable no-unused-vars */
+/* eslint-disable comma-dangle */
+/* eslint-disable keyword-spacing */
+
+import React from 'react';
+
+import{
+
+createSwitchNavigator,
+createAppContainer,
+
+} from 'react-navigation';
+
+import Welcome from './pages/Welcome';
+import Login from './pages/Login';
+import Signin from './pages/Signin';
+
+const AppSwitchNavigator = createSwitchNavigator(
+    {
+        Welcome: {
+            screen: Welcome
+        },
+        Signin: {
+            screen: Signin
+        },
+        Login: {
+            screen: Login
+        }
+        },
+        {
+            initialRouteName: 'Welcome'
+        }
+);
+export default createAppContainer(AppSwitchNavigator);
